@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NWU MOBILE</string>
+    <string name="nwu_number">NWU Number</string>
+    <string name="password">Password</string>
+</resources>
