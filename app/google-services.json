@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1082341808573",
+    "firebase_url": "https://nwumobile-f64fb.firebaseio.com",
+    "project_id": "nwumobile-f64fb",
+    "storage_bucket": "nwumobile-f64fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082341808573:android:578f207bc928f79d",
+        "android_client_info": {
+          "package_name": "com.example.bobby.nwumobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082341808573-m4jdjnglldspbt6rbrbrinf4dpkfpbm8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bobby.nwumobile",
+            "certificate_hash": "328da0c987e36bada0b185bd3d9f49b2adba6635"
+          }
+        },
+        {
+          "client_id": "1082341808573-psebjkvjo5koa1i658qqk3vvsc2mrrff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNOxL9N14H2VYFfAWdSTePcpY1ns9vRdQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082341808573-psebjkvjo5koa1i658qqk3vvsc2mrrff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

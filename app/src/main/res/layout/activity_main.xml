@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background=""
+    android:background="@drawable/background"
     tools:context=".MainActivity">
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,9 +18,66 @@
         android:layout_marginStart="111dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="113dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/nwu" />
+
+    <EditText
+        android:id="@+id/StudentNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/nwu_number"
+        android:inputType="textPersonName|number"
+        android:textColor="#0b0b0b" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/StudentNo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColor="#0e0e0e" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/roundbutton"
+        android:text="@string/login"
+        android:textColor="#ffffff" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp" />
+
+    <CheckBox
+        android:id="@+id/show_hide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Password"
+        android:layout_alignStart="@+id/StudentNo"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/show_password" />
 
 </RelativeLayout>

@@ -1,15 +1,25 @@
 package com.example.bobby.nwumobile;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -17,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText password;
     private Button login;
     private CheckBox showpassword;
-
+    private DatabaseReference mdatabase;
 
 
     @Override
@@ -36,12 +46,11 @@ public class MainActivity extends AppCompatActivity {
         CompoundButton.OnCheckedChangeListener changeListener = new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
+                if (isChecked) {
                     showpassword.setText(R.string.hide_password);
                     password.setInputType(InputType.TYPE_CLASS_TEXT);
                     password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                }
-                else {
+                } else {
                     showpassword.setText(R.string.show_password);
                     password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
                     password.setTransformationMethod(PasswordTransformationMethod.getInstance());
@@ -49,9 +58,5 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         showpassword.setOnCheckedChangeListener(changeListener);
-
-
-
-
     }
 }
