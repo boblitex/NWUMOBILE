@@ -35,7 +35,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="@string/nwu_number"
-        android:inputType="textPersonName|number"
+        android:inputType="number"
         android:textColor="#0b0b0b" />
 
     <EditText
