@@ -23,8 +23,9 @@ public class StudentDashboard extends AppCompatActivity {
         textView = findViewById(R.id.textView);
         spinner = findViewById(R.id.spinner);
 
+        textView.setText("Welcome, "+ getIntent().getStringExtra("Name") );
 
 
-        textView.setText(R.string.welcome_student );
+
     }
 }

@@ -6,7 +6,7 @@
     <string name="todo">TODO</string>
     <string name="show_password">Show Password</string>
     <string name="hide_password">Hide Password</string>
-    <string name="welcome">TextView</string>
+    <string name="welcome">welcome</string>
     <string name="welcome_lecturer">welcome lecturer</string>
     <string name="welcome_student">welcome student</string>
 

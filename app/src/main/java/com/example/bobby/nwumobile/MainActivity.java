@@ -80,10 +80,12 @@ public class MainActivity extends AppCompatActivity {
                                 switch (users.getTag()){
                                     case "student":
                                         Intent student = new Intent(MainActivity.this,StudentDashboard.class);
+                                        student.putExtra("Name",users.getName());
                                         startActivity(student);
                                         break;
                                     case "lecturer":
                                         Intent lecturer = new Intent(MainActivity.this,LecturerDashboard.class);
+                                        lecturer.putExtra("Name", users.getName());
                                         startActivity(lecturer);
                                 }
 
