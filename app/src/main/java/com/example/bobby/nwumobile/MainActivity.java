@@ -75,18 +75,22 @@ public class MainActivity extends AppCompatActivity {
                         progressDialog.dismiss();
                         Users users = dataSnapshot.child(nwunumber.getText().toString().trim()).getValue(Users.class);
                         if (dataSnapshot.child(nwunumber.getText().toString().trim()).exists()){
-
                             if (users.getPassword().equals(password.getText().toString().trim())){
                                 switch (users.getTag()){
                                     case "student":
                                         Intent student = new Intent(MainActivity.this,StudentDashboard.class);
                                         student.putExtra("Name",users.getName());
                                         startActivity(student);
+                                        nwunumber.setText("");
+                                        password.setText("");
                                         break;
                                     case "lecturer":
                                         Intent lecturer = new Intent(MainActivity.this,LecturerDashboard.class);
                                         lecturer.putExtra("Name", users.getName());
                                         startActivity(lecturer);
+                                        nwunumber.setText("");
+                                        password.setText("");
+                                        break;
                                 }
 
                             }
@@ -109,6 +113,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }
 
