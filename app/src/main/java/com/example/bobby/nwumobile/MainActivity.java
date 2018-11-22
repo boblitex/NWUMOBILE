@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                                     case "student":
                                         Intent student = new Intent(MainActivity.this,StudentDashboard.class);
                                         student.putExtra("Name",users.getName());
+                                        student.putExtra("student_num",nwunumber.getText().toString().trim());
                                         startActivity(student);
                                         nwunumber.setText("");
                                         password.setText("");
